@@ -1,0 +1,78 @@
+
+#Creación base de datos
+Create database nombre_de_la_base_de_datos;
+
+CREATe USER 'ignacio'@'localhost' IDENTIFIED BY 'Admin1234*
+
+GRANT ALL PRIVILEGES ON *.* TO 'ignacio'@'localhost' WITH GRANT OPTION
+
+CREATE USER 'ignacio'@'%' IDENTIFIED BY 'Admin1234*'
+
+GRANT ALL PRIVILEGES ON *.* TO 'ignacio'@'%' WITH GRANT OPTION 
+
+FLUSH PRIVILEGES
+
+
+-- show databases; //muestra las bases de datos//
+
+
+#Creación base de datos
+Create database nombre_de_la_base_de_datos;
+
+-- use nombre_de_la_base_de_datos;  //para usar la base de datos que queremos//
+
+-- show tables; //muestras las tablas dentro de las bases de datos//
+
+-- 
+CREATE TABLE nombre_tabla(
+     PRIMARY KEY (id) tipo_dato,
+     nombre_columna1 tipo_dato,
+     ...
+)
+
+//estructura de la creación de tablas//
+
+-- describe nombre_tabla;  //muestra las columnas de la tabla seleccionada//
+
+
+-- select * from nombre_tabla //sirve para consultar los datos que guarda la tabla 
+
+
+//agregar datos en la tabla//
+
+// INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...);
+
+-- TRUNCATE TABLE nobre_tabla; //vacía la tabla//
+
+-- DROP TABLE nombre_tabla; //Elimina la tabla//
+
+-- drop database nombre_database; //Elimina toda la database//
+
+-- UPDATE nombre_tabla
+   SET columna_a_modifica = valor_a_insertar, columna_a_modificar2 = valor_a_insertar2
+   WHERE id = id_correspondiente_al_registro;
+
+//Actualizar datos de la tabla //
+
+// WHERE sirve para localizarnos en alguna columna en particular y filtrar datos//
+
+//Like es para filtrar datos en base a algunos carácteres en particular//
+
+//Between para filtrar entre secciones//
+
+// asc para ordenar de manera ascendente//
+
+//desc para ordenar de manera descendente//
+
+-- ALTER TABLE  nombre tabla
+   ADD nombre_columna restriccion;
+
+// modifica la tabla//
+
+//relacionar tablas
+
+-- ALTER TABLE clientes
+   ADD FOREING KEY (direccionId) REFERENCES direcciones (id);
+
+ALTER TABLE clientes ADD FOREIGN KEY (direccionId) REFERENCES direcciones(id);
+

@@ -1,0 +1,82 @@
+-- Se crea el proyecto. 
+-- Se edita el pom
+-- Se hacen las carpetas de Controllers, Model, Services, Repository, api
+
+/nombre del proyecto/src/main/java/com.generation
+
+-- Se crea la carpeta webapp con la carpeta WEB-INF dentro
+
+/nombre del proyecto/src/main/webapp/WEB-INF
+
+-- se edita el aplication.properties 
+
+  spring.mvc.view.prefix = /WEB-INF/
+
+/nombre del proyecto/src/main/resources
+
+-- En WEB-INF se crea el index.jsp
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+/nombre del proyecto/src/main/webapp/WEB-INF
+
+-- Se crea el controller dentro la carpeta Controllers en com.generation
+
+@Controller
+public class IndexController {
+    // http://localhost:8080\
+    @RequestMapping("/") //anotación para capturar las rutas
+    public String index() {
+        return"index.jsp";
+}
+}
+
+-- Para agregar atributos "clave, valor", dentro del controller
+
+    public String index(Model model)
+    model.addAttribute(clave, valor);
+
+-- Se imprimen en el browser con el nombre de la calve del atributo "clave, valor"
+
+<c:out value="$Clave"></c:out>
+
+-- En la carpeta Models dentro de com.generation se crea un objeto (atributos, constructores, getter & setter)
+
+-- Se hace la instancia de usuario en el indexController
+
+   Objeto objeto = new Objeto
+
+-- Se imprime en el browser con 
+   
+   <c:out value="$objeto.elAtributoAMostrar"></c:out>
+
+-- Para realizar un registro 
+   
+   nuevo JSP en WEB-INF
+   <div></div> entre <Body>
+   <form action ="" method = "get"> entre <div>
+   <label> entre <from>
+   <input> entre <form>
+
+-- Submit para envio de info
+-- button no tiene funcion predeterminada
+
+--para trabajar con formularios añadir al .jsp
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
